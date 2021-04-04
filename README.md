@@ -9,12 +9,14 @@
 * The dataset created by torch_geometric must be saved in a dirctory named "processed"
 
 ### Install
-```
-pip install numpy
-pip install pandas
-pip install collections
-pip install seaborn
-```
+* Some basic packages can be installed via pip directly
+
+  ```
+  pip install numpy
+  pip install pandas
+  pip install collections
+  pip install seaborn
+  ```
 
 * When installing pytorch, the versions of pytorch, torchvision, cuda and cudnn should be matched. Here is my install command as a reference.
   ```
@@ -29,6 +31,14 @@ pip install seaborn
   $ pip install torch-spline-conv==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.5.0.html
   $ python setup.py install or pip install torch-geometric
   ```
+
+### Prediction
+
+In this project, 3 kinds of classification are performed with GNN:
+
+1. Create graphs from samples of different kinds of tissues respectively where a node stands for a methylation sites, the feature of the node is the $\beta$ values of the site in different samples, the existence of edge depend on the correlation coefficient between two nodes' features and the feature of edge is relative to the correlation coefficient, too. Then we use GNN to classify which tissue one graph belongs to and more importantly, extract the most activated methylation sites that perform differently in different tissues for further research.
+2. From the samples of same tissue, sampling tumor samples and normal samples to create graphs respectively. The method of creating a graph is similar to that in (1). Using GNN to classify whether one graph belongs to tumor or not and extract the methylation sites that perform differently between tumor and normal samples.
+3. Using GNN to classify which tissue one sample belongs to: create graphs where a node stands for a sample, the feature of the node is the beta values of the sites selected from (1) of the sample the existence of edge depend on the correlation coefficient between two nodes' features and the feature of edge is relative to the correlation coefficient, too. Then using GNN to perform node-classification.
 
 ### Demo
 

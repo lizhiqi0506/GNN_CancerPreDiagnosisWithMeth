@@ -11,7 +11,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import GCNConv, GATConv, GatedGraphConv,TopKPooling
 import torch.optim as optim
-from createDataset_nodeclassify import *
+from .node_classify.createDataset_nodeclassify import *
 
 
 """

@@ -1,8 +1,14 @@
-### Graph neural network learning model for precision multi-tumour early diagnostics with DNA methylation data
+## Graph neural network learning model for precision multi-tumour early diagnostics with DNA methylation data
 
 ---
 
-#### Demo
+### Running Environment
+
+* Linux environment, Python 3
+* The following packages need to be available: numpy,pandas,collections,pytorch,torch_geometirc,seaborn
+* The dataset created by torch_geometric must be saved in a dirctory named "processed"
+
+### Demo
 
 ##### Data Preprocess
 

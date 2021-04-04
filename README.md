@@ -6,7 +6,7 @@
 
 * Linux environment, Python 3
 * The following packages need to be available: numpy,pandas,collections,pytorch,torch_geometirc,seaborn
-* The dataset created by torch_geometric must be saved in a dirctory named "processed"
+* The dataset created by torch_geometric must be saved in a folder named "processed"
 * The script prediction.py and the folders (diffTissue, data, case_normal, node_classify) need to be in the same directory.
 
 ### Install

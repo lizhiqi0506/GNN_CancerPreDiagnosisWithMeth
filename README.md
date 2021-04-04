@@ -53,7 +53,7 @@
   * power次方的相关系数作为边的特征值
   * 图神经网络模型如下
 
-  ![gnn_model2](C:\Users\lenovo\Desktop\gnn_model2.png)
+  ![gnn_model](gnn_model.png)
 
 * 同类样本的case-normal分类
 

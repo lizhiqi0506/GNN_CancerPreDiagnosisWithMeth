@@ -8,6 +8,28 @@
 * The following packages need to be available: numpy,pandas,collections,pytorch,torch_geometirc,seaborn
 * The dataset created by torch_geometric must be saved in a dirctory named "processed"
 
+### Install
+```
+pip install numpy
+pip install pandas
+pip install collections
+pip install seaborn
+```
+
+* When installing pytorch, the versions of pytorch, torchvision, cuda and cudnn should be matched. Here is my install command as a reference.
+  ```
+  conda install pytorch==1.5.0 torchvision==0.6.0 cudatoolkit=10.2 -c pytorch
+  ```
+* torch_geometric is a powerful API of many kinds of Graph Neural Network based on Pytorch. There are 4 dependency packages to be installed before installing torch_geometric, and those version should be matched with the versions of cuda and pytorch.
+  
+  ```
+  $ pip install torch-scatter==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.5.0.html
+  $ pip install torch-sparse==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.5.0.html
+  $ pip install torch-cluster==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.5.0.html
+  $ pip install torch-spline-conv==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.5.0.html
+  $ python setup.py install or pip install torch-geometric
+  ```
+
 ### Demo
 
 ##### Data Preprocess
